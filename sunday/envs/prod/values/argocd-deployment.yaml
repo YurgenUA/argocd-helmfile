@@ -1,0 +1,16 @@
+source:
+  revision: "main"
+destination:
+  namespace: "prod-medium"
+applications:
+  # - name: redis-main
+  #   chart: redis
+  #   values:
+  #     - redis-main.yaml
+- name: tls-certificate
+  namespace: prod-medium
+  chart: tlscert
+  values:
+    - tls-certificate.yaml
+  secrets:
+    - tls-certificate.secrets.yaml
