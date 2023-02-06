@@ -12,4 +12,5 @@ applications:
   chart: tlscert
   values:
     - tls-certificate.yaml
+  secrets:
     - tls-certificate.secrets.yaml
